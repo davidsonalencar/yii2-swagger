@@ -2,6 +2,7 @@
 
 namespace yii2mod\swagger;
 
+use OpenApi\Annotations\OpenApi;
 use Swagger\Annotations\Swagger;
 use Yii;
 use yii\base\Action;
@@ -41,7 +42,7 @@ class OpenAPIRenderer extends Action
     /**
      * @var int default duration in seconds before the cache will expire
      */
-    public $cacheDuration = 360;
+    public $cacheDuration = 3600;
 
     /**
      * @var string the key used to store swagger data in cache
@@ -75,14 +76,14 @@ class OpenAPIRenderer extends Action
      *
      * @return Swagger
      */
-    protected function getSwaggerDocumentation(): Swagger
+    protected function getSwaggerDocumentation(): OpenApi
     {
         if (!$this->cache instanceof Cache) {
-            return \Swagger\scan($this->scanDir, $this->scanOptions);
+            return \OpenApi\scan($this->scanDir, $this->scanOptions);
         }
 
         return $this->cache->getOrSet($this->cacheKey, function () {
-            return \Swagger\scan($this->scanDir, $this->scanOptions);
+            return \OpenApi\scan($this->scanDir, $this->scanOptions);
         }, $this->cacheDuration);
     }
 
