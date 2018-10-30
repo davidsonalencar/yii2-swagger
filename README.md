@@ -21,13 +21,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist yii2mod/yii2-swagger "*"
+php composer.phar require --prefer-dist breadhead/yii2-swagger "*"
 ```
 
 or add
 
 ```
-"yii2mod/yii2-swagger": "*"
+"breadhead/yii2-swagger": "*"
 ```
 
 to the require section of your composer.json.
@@ -46,12 +46,8 @@ use yii\helpers\Url;
 use yii\web\Controller;
 
 /**
- * @SWG\Swagger(
- *     basePath="/",
- *     produces={"application/json"},
- *     consumes={"application/x-www-form-urlencoded"},
- *     @SWG\Info(version="1.0", title="Simple API"),
- * )
+ * 
+ * @SWG\Info(version="1.0", title="Simple API")
  */
 class SiteController extends Controller
 {
@@ -62,11 +58,11 @@ class SiteController extends Controller
     {
         return [
             'docs' => [
-                'class' => 'yii2mod\swagger\SwaggerUIRenderer',
+                'class' => 'breadhead\swagger\SwaggerUIRenderer',
                 'restUrl' => Url::to(['site/json-schema']),
             ],
             'json-schema' => [
-                'class' => 'yii2mod\swagger\OpenAPIRenderer',
+                'class' => 'breadhead\swagger\OpenAPIRenderer',
                 // Тhe list of directories that contains the swagger annotations.
                 'scanDir' => [
                     Yii::getAlias('@app/controllers'),
@@ -100,13 +96,13 @@ use yii\rest\Controller;
 class UserController extends Controller
 {
     /**
-     * @SWG\Get(path="/user",
+     * @OA\Get(path="/user",
      *     tags={"User"},
      *     summary="Retrieves the collection of User resources.",
-     *     @SWG\Response(
+     *     @OA\Response(
      *         response = 200,
      *         description = "User collection response",
-     *         @SWG\Schema(ref = "#/definitions/User")
+     *         @OA\Schema(ref = "#/components/schemas/User")
      *     ),
      * )
      */
@@ -131,11 +127,11 @@ You need to create folder `app/models/definitions` and add `User` definition cla
 namespace app\models\definitions;
 
 /**
- * @SWG\Definition(required={"username", "email"})
+ * @OA\SCHEMA(required={"username", "email"})
  *
- * @SWG\Property(property="id", type="integer")
- * @SWG\Property(property="email", type="string")
- * @SWG\Property(property="username", type="string")
+ * @OA\Property(property="id", type="integer")
+ * @OA\Property(property="email", type="string")
+ * @OA\Property(property="username", type="string")
  */
 class User
 {
