@@ -8,12 +8,6 @@
         "yii2 api documentation generator"
     ],
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Igor Chepurnoi",
-            "email": "chepurnoi.igor@gmail.com"
-        }
-    ],
     "require": {
         "php": ">=7.1.0",
         "yiisoft/yii2": "~2.0.12",
