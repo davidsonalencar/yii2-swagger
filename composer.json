@@ -1,6 +1,6 @@
 {
     "name": "breadhead/yii2-swagger",
-    "description": "Swagger Documentation Generator for Yii2 Framework",
+    "description": "Swagger Documentation Generator for Yii2 Framework with swagger v3.0",
     "type": "yii2-extension",
     "keywords": [
         "yii2",
@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "yii2mod\\swagger\\": ""
+            "breadhead\\yii2-swagger\\": ""
         }
     },
     "repositories": [
