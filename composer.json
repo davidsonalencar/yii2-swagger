@@ -1,5 +1,5 @@
 {
-    "name": "breadhead/yii2-swagger",
+    "name": "dalencar/yii2-swagger",
     "description": "Swagger Documentation Generator for Yii2 Framework with swagger v3.0",
     "type": "yii2-extension",
     "keywords": [
@@ -9,7 +9,7 @@
     ],
     "license": "MIT",
     "require": {
-        "php": ">=7.1.0",
+        "php": ">=5.5.0",
         "yiisoft/yii2": "~2.0.12",
         "zircote/swagger-php": "^3.0",
         "bower-asset/swagger-ui": "^3.1"
