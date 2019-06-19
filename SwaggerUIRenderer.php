@@ -1,13 +1,13 @@
 <?php
 
-namespace yii2mod\swagger;
+namespace dalencar\swagger;
 
 use yii\base\Action;
 
 /**
  * Class SwaggerUIRenderer renders the UI (HTML/JS/CSS).
  *
- * @package yii2mod\swagger
+ * @package dalencar\swagger
  */
 class SwaggerUIRenderer extends Action
 {
