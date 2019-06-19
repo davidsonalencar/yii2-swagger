@@ -1,13 +1,13 @@
 <?php
 
-namespace yii2mod\swagger;
+namespace dalencar\swagger;
 
 use yii\web\AssetBundle;
 
 /**
  * Class SwaggerAsset
  *
- * @package yii2mod\swagger
+ * @package dalencar\swagger
  */
 class SwaggerAsset extends AssetBundle
 {
