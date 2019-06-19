@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "breadhead\\yii2-swagger\\": ""
+            "dalencar\\yii2-swagger\\": ""
         }
     },
     "repositories": [
