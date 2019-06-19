@@ -13,7 +13,7 @@ use yii\web\Response;
 /**
  * Class OpenAPIRenderer is responsible for generating the JSON spec.
  *
- * @package dalencar\swagger\actions
+ * @package dalencar\swagger
  */
 class OpenAPIRenderer extends Action
 {
