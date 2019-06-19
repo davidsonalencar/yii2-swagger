@@ -1,6 +1,6 @@
 <?php
 
-namespace yii2mod\swagger;
+namespace dalencar\swagger;
 
 use OpenApi\Annotations\OpenApi;
 use Swagger\Annotations\Swagger;
@@ -13,7 +13,7 @@ use yii\web\Response;
 /**
  * Class OpenAPIRenderer is responsible for generating the JSON spec.
  *
- * @package yii2mod\swagger\actions
+ * @package dalencar\swagger\actions
  */
 class OpenAPIRenderer extends Action
 {
