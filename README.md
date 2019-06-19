@@ -21,13 +21,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist breadhead/yii2-swagger "*"
+php composer.phar require --prefer-dist dalencar/yii2-swagger "*"
 ```
 
 or add
 
 ```
-"breadhead/yii2-swagger": "*"
+"dalencar/yii2-swagger": "*"
 ```
 
 to the require section of your composer.json.
